@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/my_grid"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:columnCount="8" >
+ 
+ <!-- Movie Poster -->
+<uk.co.senab.bitmapcache.CacheableImageView
+    android:id="@+id/movie_poster"
+    android:layout_columnSpan="3"
+    android:layout_rowSpan="3"
+    android:padding="4dip"
+    />
+<!-- Movie Title -->
+<TextView
+    android:id="@+id/movie_title"
+    android:layout_columnSpan="3"
+    android:paddingLeft="8dip"
+    android:textColor="#111"
+    android:textSize="16sp"
+    android:textStyle="bold"
+    />
+<!-- Movie Year -->
+<TextView
+    android:id="@+id/movie_year"
+    android:layout_columnSpan="2"
+    android:textSize="12sp"
+    android:paddingLeft="8dip"
+    android:textColor="#444444"
+    android:textStyle="bold"
+    />
+<!-- MPAA Rating -->
+<TextView
+    android:id="@+id/mpaa_rating"
+    android:layout_columnSpan="2"
+    android:layout_gravity="center"
+    android:paddingLeft="8dip"
+    android:textSize="12sp"
+    android:textColor="#980000"
+    />
+
+<Space
+    android:layout_gravity="fill_horizontal"
+    android:layout_rowSpan="1"
+    />
+
+<!-- Runtime -->
+<TextView
+    android:id="@+id/runtime"
+    android:layout_columnSpan="2"
+    android:paddingLeft="8dip"
+    android:textSize="14sp"
+    android:textColor="#000000"
+    />
+<!-- Critic Consensus -->
+<TextView
+    android:id="@+id/critics_consensus"
+    android:layout_columnSpan="5"
+    android:paddingLeft="8dip"
+    android:textSize="12sp"
+    android:textColor="#000"
+    />
+<!-- Critic Score Label -->
+<TextView
+    android:id="@+id/critics_score_label"
+    android:layout_columnSpan="4"
+    android:layout_gravity="fill_horizontal"
+    android:background="#333"
+    android:padding="4dip"
+    android:text="Critics Score"
+    android:textColor="#efefef"
+    android:textSize="12sp"
+    android:textStyle="bold"
+    />
+<!-- User Score Label -->
+<TextView
+    android:id="@+id/user_score_label"
+    android:layout_columnSpan="4"
+    android:layout_gravity="fill_horizontal"
+    android:background="#333"
+    android:padding="4dip"
+    android:textColor="#efefef"
+    android:textSize="12sp"
+    android:textStyle="bold"
+    android:text="User Score"
+    />
+<!-- IMDB icon -->
+<ImageView
+    android:id="@+id/imdb_icon"
+    android:layout_rowSpan="2"
+    android:padding="4dip"
+    android:src="@drawable/imdb" 
+    /> 
+<!-- IMDB Rating -->
+<TextView
+    android:id="@+id/imdb_rating"
+    android:layout_rowSpan="2"
+    android:padding="4dip"
+    android:layout_gravity="center"
+    />
+<!-- RT icon -->
+<ImageView
+    android:id="@+id/rt_icon"
+    android:layout_rowSpan="2"
+    android:padding="4dip"
+    android:src="@drawable/good" 
+    />
+<!-- RT rating -->
+<TextView
+    android:id="@+id/rt_rating"
+    android:layout_rowSpan="2"
+    android:padding="4dip"
+    android:layout_gravity="center"
+    />
+<!-- Meta Critic icon -->
+<ImageView
+    android:id="@+id/meta_icon"
+    android:layout_rowSpan="2"
+    android:padding="4dip"
+    android:src="@drawable/imdb" 
+    />
+<!-- Meta Critic rating -->
+<TextView
+    android:id="@+id/meta_rating"
+    android:layout_rowSpan="2"
+    android:padding="4dip"
+    android:layout_gravity="center"
+    />
+<!-- RT User icon -->
+<ImageView
+    android:id="@+id/user_icon"
+    android:layout_rowSpan="2"
+    android:padding="4dip"
+    android:src="@drawable/good" 
+    />
+<!-- RT User rating -->
+<TextView
+    android:id="@+id/user_rating"
+    android:layout_rowSpan="2"
+    android:padding="4dip"
+    android:layout_gravity="center"
+    />
+<!-- Movie Info -->
+<TextView
+    android:id="@+id/movie_info"
+    android:layout_columnSpan="8"
+    android:layout_gravity="fill_horizontal"
+    android:background="#333"
+    android:padding="4dip"
+    android:text="Movie Info"
+    android:textColor="#efefef"
+    android:textSize="12sp"
+    android:textStyle="bold" />
+<!-- Theater release date label -->
+<TextView
+    android:id="@+id/theater_release_date_label"
+    android:layout_columnSpan="8"
+    android:paddingLeft="4dip"
+    android:layout_marginTop="4dip"
+    android:textSize="12sp"
+    android:textStyle="bold"
+    android:textColor="#000000"
+    android:text="Release Date"
+    />
+<!-- Theater release date -->
+<TextView
+    android:id="@+id/theater_release_date"
+    android:layout_columnSpan="8"
+    android:layout_marginTop="4dip"
+    android:paddingLeft="4dip"
+    android:textSize="12sp"
+    android:textColor="#000000"
+    />
+<!-- Genre label -->
+<TextView
+    android:id="@+id/genre_label"
+    android:layout_columnSpan="8"
+    android:paddingLeft="4dip"
+    android:layout_marginTop="4dip"
+    android:textSize="12sp"
+    android:textStyle="bold"
+    android:textColor="#000000"
+    android:text="Genre"
+    />
+<!-- Genre-->
+<TextView
+    android:id="@+id/genre"
+    android:layout_columnSpan="8"
+    android:layout_marginTop="4dip"
+    android:paddingLeft="4dip"
+    android:textSize="12sp"
+    android:textColor="#000000"
+    />
+<!-- Top Billed Cast -->
+<TextView
+    android:id="@+id/top_billed_cast"
+    android:layout_columnSpan="8"
+    android:layout_gravity="fill_horizontal"
+    android:layout_marginTop="8dip"
+    android:background="#333"
+    android:padding="4dip"
+    android:textColor="#efefef"
+    android:textSize="12sp"
+    android:textStyle="bold"
+    android:text="Top Billed Cast"
+    />
+<!-- Cast Loading -->
+<TextView
+    android:id="@+id/cast_loading"
+   	android:layout_columnSpan="8"
+   	android:layout_gravity="fill_horizontal"
+   	android:gravity="center"
+   	android:textSize="12sp"
+    android:text="@string/loading" />
+<!-- Reviews -->
+<TextView
+    android:id="@+id/reviews"
+    android:layout_columnSpan="8"
+    android:layout_gravity="fill_horizontal"
+    android:layout_marginTop="8dip"
+    android:background="#333"
+    android:padding="4dip"
+    android:textColor="#efefef"
+    android:textSize="12sp"
+    android:textStyle="bold"
+    android:text="Reviews"
+    />
+<!-- Review Loading -->
+<TextView
+    android:id="@+id/review_loading"
+   	android:layout_columnSpan="8"
+   	android:layout_gravity="fill_horizontal"
+   	android:gravity="center"
+   	android:textSize="12sp"
+    android:text="@string/loading" />
+
+</GridLayout>

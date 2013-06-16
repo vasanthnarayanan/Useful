@@ -1,0 +1,43 @@
+LinearLayout linearLayout = (LinearLayout) activity.findViewById(R.id.linear_layout);
+							 	View loadingView =(TextView) activity.findViewById(R.id.cast_loading);
+							 	linearLayout.removeView(loadingView);
+							 	if(characterList.size() >0){
+							  		for(int i=0; i<characterList.size(); i++){
+							  			 HashMap<String, Object> map = new HashMap<String, Object>();
+							  			 map = characterList.get(i);
+							  			 /**
+							  			  * Inner linear layout
+							  			  */
+							  			 LinearLayout innerLinearLayout = new LinearLayout(activity);
+							  			 LinearLayout.LayoutParams illp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,LinearLayout.LayoutParams.WRAP_CONTENT);
+							  			 innerLinearLayout.setLayoutParams(illp);
+							  			 linearLayout.addView(innerLinearLayout);
+							  			 /**
+							  			  * Width , Height , Weight
+							  			  */
+							  			 LinearLayout.LayoutParams llp = new LinearLayout.LayoutParams(0,LinearLayout.LayoutParams.WRAP_CONTENT,1.0f);
+							  			 if(map.containsKey("cast")){
+							  				 /**
+							  				  * Text views for inner linear layout
+							  				  */
+							  				 TextView titleText = new TextView(activity);
+							  				 titleText.setText(map.get("cast").toString());
+							  				 titleText.setTextSize(12);
+									  	
+							  				 titleText.setLayoutParams(llp);
+							  				 innerLinearLayout.addView(titleText);
+							  			 }
+							  			 if(map.containsKey("character")){
+							  				 /**
+										 	 * Text views for inner linear layout
+										 	 */
+										 	TextView titleText = new TextView(activity);
+										  	titleText.setText(map.get("character").toString());
+										  	titleText.setTextSize(12);
+										  	
+										  	titleText.setLayoutParams(llp);
+										  	innerLinearLayout.addView(titleText);
+							  			 }
+							 	
+							  			}
+							 		}

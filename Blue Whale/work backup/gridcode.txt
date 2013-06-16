@@ -1,0 +1,34 @@
+ 	GridLayout gridLayout = (GridLayout) activity.findViewById(R.id.my_grid);
+							 	View loadingView =(TextView) activity.findViewById(R.id.cast_loading);
+							 	//
+							 	View reviewLabel =(TextView) activity.findViewById(R.id.reviews);
+							 	GridLayout.Spec col = GridLayout.spec(0,8,GridLayout.BASELINE);
+							  	GridLayout.Spec row = GridLayout.spec(12+characterList.size());
+							  	GridLayout.LayoutParams nglp= new GridLayout.LayoutParams(row , col);
+							  	gridLayout.updateViewLayout(reviewLabel, nglp);
+							  	//
+							 	gridLayout.removeView(loadingView);
+							  	if(characterList.size() >0){
+							  		for(int i=0; i<characterList.size(); i++){
+							  			 HashMap<String, Object> map = new HashMap<String, Object>();
+							  			 map = characterList.get(i);
+							  			 if(map.containsKey("cast")){
+							  				GridLayout.Spec titleTxtSpecColumn = GridLayout.spec(0,4, GridLayout.BASELINE);
+										  	GridLayout.Spec titleRowSpec = GridLayout.spec(12+i);
+										  	TextView titleText = new TextView(activity);
+										  	titleText.setText(map.get("cast").toString());
+										  	titleText.setTextSize(12);
+										  	GridLayout.LayoutParams glp= new GridLayout.LayoutParams(titleRowSpec , titleTxtSpecColumn);
+										  	gridLayout.addView(titleText, glp);
+							  			 }
+							  			 if(map.containsKey("character")){
+							  				GridLayout.Spec titleTxtSpecColumn = GridLayout.spec(4,4, GridLayout.BASELINE);
+										  	GridLayout.Spec titleRowSpec = GridLayout.spec(12+i);
+										  	TextView titleText = new TextView(activity);
+										  	titleText.setText(map.get("character").toString());
+										  	titleText.setTextSize(12);
+										  	GridLayout.LayoutParams glp= new GridLayout.LayoutParams(titleRowSpec , titleTxtSpecColumn);
+										  	gridLayout.addView(titleText, glp);
+							  			 }
+							  			
+							  		}
